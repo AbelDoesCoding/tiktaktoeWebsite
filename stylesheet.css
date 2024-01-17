@@ -1,10 +1,24 @@
 img {
     height: auto;
-    width: 50px;
+    width: 150px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+}
+.header-items {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+ 
 }
 
 .row-one-container {
     display: flex;
+    justify-content: center;
 }
 .row-one-container-items {
     display: flex;
@@ -12,6 +26,7 @@ img {
 }
 .row-two-container {
     display: flex;
+    justify-content: center;
 }
 .row-two-container-items {
     display: flex;
@@ -19,6 +34,7 @@ img {
 }
 .row-three-container {
     display: flex;
+    justify-content: center;
 }
 .row-three-container-items {
     display: flex;

@@ -27,8 +27,6 @@ var btmCenterCheck = 0;
 const bottomRight = "bottomRight"
 var btmRightCheck = 0;
 
-
-
 function xMove(quadrant, xCheck) {
     if (turnNumber == 0 && xCheck == 0) {
         document.getElementById(quadrant).src="blackX.png";
@@ -42,6 +40,30 @@ function xMove(quadrant, xCheck) {
         return xCheck;
     }
 }
+/*
+var testArray = [0, 0, 1, 1, 0 , 1 , 1, 1, 0];
+var x = 0;
+
+function winnerCheck() {
+    for (i in testArray) {
+        console.log(i);
+        console.log("---");
+        console.log(x);
+        console.log("---");
+        x += 1;
+        i += i;
+        if (x == 3 && i == 3) {
+            console.log("Player two wins!");
+            break;
+        } else if (x == 3 && i == 0) {
+            console.log("Player two wins!");
+            break;
+        } else if (i == 3) {
+            i = 0;
+            continue;
+        }   
+}
+*/
 
 function mainFuncTopLeft() {
     topLeftCheck = xMove(topLeft, topLeftCheck);
