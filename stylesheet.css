@@ -1,0 +1,26 @@
+img {
+    height: auto;
+    width: 50px;
+}
+
+.row-one-container {
+    display: flex;
+}
+.row-one-container-items {
+    display: flex;
+    justify-content: center;
+}
+.row-two-container {
+    display: flex;
+}
+.row-two-container-items {
+    display: flex;
+    justify-content: center;
+}
+.row-three-container {
+    display: flex;
+}
+.row-three-container-items {
+    display: flex;
+    justify-content: center;
+}
