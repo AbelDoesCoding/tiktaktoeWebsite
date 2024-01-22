@@ -1,38 +1,10 @@
 var turnNumber = 0;
 
-/* 
-const topLeft = "topLeft";
-var topLeftCheck = 0;
-
-const topCenter = "topCenter";
-var topCenterCheck = 0;
-
-const topRight = "topRight";
-var topRightCheck = 0;
-
-const middleLeft = "middleLeft";
-var midLeftCheck = 0;
-
-const middleCenter = "middleCenter";
-var midCenterCheck = 0;
-
-const middleRight = "middleRight";
-var midRightCheck = 0;
-
-const bottomLeft = "bottomLeft";
-var btmLeftCheck = 0;
-
-const bottomCenter = "bottomCenter";
-var btmCenterCheck = 0;
-
-const bottomRight = "bottomRight"
-var btmRightCheck = 0; */
-
 var gameBoard = {
-    topLeft: ["topleft", 0],
+    topLeft: ["topLeft", 0],
     topCenter: ["topCenter", 0],
     topRight: ["topRight", 0],
-    middleLeft: ["middleleft", 0],
+    middleLeft: ["middleLeft", 0],
     middleCenter: ["middleCenter", 0],
     middleRight: ["middleRight", 0],
     bottomLeft: ["bottomLeft", 0],
@@ -44,7 +16,6 @@ var gameBoard = {
 const container = document.querySelector('#turn-announcer');
 const content = document.createElement('turn');
 content.classList.add('content');
-
 
 function xMove(quadrant, xCheck) {
     if (turnNumber == 0 && xCheck == 0) {
@@ -79,7 +50,7 @@ function mainFuncTopRight() {
     container.appendChild(content);
 }
 function mainFuncMidLeft() {
-    gameBoard.middleLeft[1] = xMove(gameBoard.middleLeft[1], gameBoard.middleLeft[1]);
+    gameBoard.middleLeft[1] = xMove(gameBoard.middleLeft[0], gameBoard.middleLeft[1]);
     container.appendChild(content);
     // ??
 }
