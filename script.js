@@ -66,39 +66,41 @@ function xMove(quadrant, xCheck) {
 }
 
 function mainFuncTopLeft() {
-    gameBoard.topLeft[1] = xMove("topLeft", gameBoard.topLeft[1]);
+    gameBoard.topLeft[1] = xMove(gameBoard.topLeft[0], gameBoard.topLeft[1]);
     container.appendChild(content);
+    // ??
 }
 function mainFuncTopCenter() {
-    gameBoard.topCenter[1] = xMove("topCenter", gameBoard.topCenter[1]);
+    gameBoard.topCenter[1] = xMove(gameBoard.topCenter[0], gameBoard.topCenter[1]);
     container.appendChild(content);
 }
 function mainFuncTopRight() {
-    gameBoard.topRight[1] = xMove("topRight",  gameBoard.topRight[1]);
+    gameBoard.topRight[1] = xMove(gameBoard.topRight[0],  gameBoard.topRight[1]);
     container.appendChild(content);
 }
 function mainFuncMidLeft() {
-    gameBoard.middleLeft[1] = xMove("middleLeft", gameBoard.middleLeft[1]);
+    gameBoard.middleLeft[1] = xMove(gameBoard.middleLeft[1], gameBoard.middleLeft[1]);
     container.appendChild(content);
+    // ??
 }
 function mainFuncMidCenter() {
-    gameBoard.middleCenter[1] = xMove("middleCenter", gameBoard.middleCenter[1]);
+    gameBoard.middleCenter[1] = xMove(gameBoard.middleCenter[0], gameBoard.middleCenter[1]);
     container.appendChild(content);
 }
 function mainFuncMidRight() {
-    gameBoard.middleRight[1] = xMove("middleRight", gameBoard.middleRight[1]);
+    gameBoard.middleRight[1] = xMove(gameBoard.middleRight[0], gameBoard.middleRight[1]);
     container.appendChild(content);
 }
 function mainFuncBtmLeft() {
-    gameBoard.bottomLeft[1] = xMove("bottomLeft", gameBoard.bottomLeft[1]);
+    gameBoard.bottomLeft[1] = xMove(gameBoard.bottomLeft[0], gameBoard.bottomLeft[1]);
     container.appendChild(content);
 }
 function mainFuncBtmCenter() {
-    gameBoard.bottomCenter[1] = xMove("bottomCenter", gameBoard.bottomCenter[1]);
+    gameBoard.bottomCenter[1] = xMove(gameBoard.bottomCenter[0], gameBoard.bottomCenter[1]);
     container.appendChild(content);
 }
 function mainFuncBtmRight() {
-    gameBoard.bottomRight[1] = xMove("bottomRight", gameBoard.bottomRight[1]);
+    gameBoard.bottomRight[1] = xMove(gameBoard.bottomRight[0], gameBoard.bottomRight[1]);
     container.appendChild(content);
 }
 
