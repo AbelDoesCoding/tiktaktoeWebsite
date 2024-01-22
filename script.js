@@ -1,6 +1,6 @@
 var turnNumber = 0;
 
-/* these variables need to become one array, should have done that in the first placce*/
+/* 
 const topLeft = "topLeft";
 var topLeftCheck = 0;
 
@@ -26,7 +26,19 @@ const bottomCenter = "bottomCenter";
 var btmCenterCheck = 0;
 
 const bottomRight = "bottomRight"
-var btmRightCheck = 0;
+var btmRightCheck = 0; */
+
+var gameBoard = {
+    topLeft: ["topleft", 0],
+    topCenter: ["topCenter", 0],
+    topRight: ["topRight", 0],
+    middleLeft: ["middleleft", 0],
+    middleCenter: ["middleCenter", 0],
+    middleRight: ["middleRight", 0],
+    bottomLeft: ["bottomLeft", 0],
+    bottomCenter: ["bottomCenter", 0],
+    bottomRight: ["bottomRight", 0],
+}
 
 // Creates element for annoucing whose turn it is runs it through xMove function
 const container = document.querySelector('#turn-announcer');
@@ -52,65 +64,41 @@ function xMove(quadrant, xCheck) {
         return xCheck;
     }
 }
-/*
-var testArray = [0, 0, 1, 1, 0 , 1 , 1, 1, 0];
-var x = 0;
-
-function winnerCheck() {
-    for (i in testArray) {
-        console.log(i);
-        console.log("---");
-        console.log(x);
-        console.log("---");
-        x += 1;
-        i += i;
-        if (x == 3 && i == 3) {
-            console.log("Player two wins!");
-            break;
-        } else if (x == 3 && i == 0) {
-            console.log("Player two wins!");
-            break;
-        } else if (i == 3) {
-            i = 0;
-            continue;
-        }   
-}
-*/
 
 function mainFuncTopLeft() {
-    topLeftCheck = xMove(topLeft, topLeftCheck);
+    gameBoard.topLeft[1] = xMove("topLeft", gameBoard.topLeft[1]);
     container.appendChild(content);
 }
 function mainFuncTopCenter() {
-    topCenterCheck = xMove(topCenter, topCenterCheck);
+    gameBoard.topCenter[1] = xMove("topCenter", gameBoard.topCenter[1]);
     container.appendChild(content);
 }
 function mainFuncTopRight() {
-    topRightCheck = xMove(topRight, topRightCheck);
+    gameBoard.topRight[1] = xMove("topRight",  gameBoard.topRight[1]);
     container.appendChild(content);
 }
 function mainFuncMidLeft() {
-    midLeftCheck = xMove(middleLeft, midLeftCheck);
+    gameBoard.middleLeft[1] = xMove("middleLeft", gameBoard.middleLeft[1]);
     container.appendChild(content);
 }
 function mainFuncMidCenter() {
-    midCenterCheck = xMove(middleCenter, midCenterCheck);
+    gameBoard.middleCenter[1] = xMove("middleCenter", gameBoard.middleCenter[1]);
     container.appendChild(content);
 }
 function mainFuncMidRight() {
-    midRightCheck = xMove(middleRight, midRightCheck);
+    gameBoard.middleRight[1] = xMove("middleRight", gameBoard.middleRight[1]);
     container.appendChild(content);
 }
 function mainFuncBtmLeft() {
-    btmLeftCheck = xMove(bottomLeft, btmLeftCheck);
+    gameBoard.bottomLeft[1] = xMove("bottomLeft", gameBoard.bottomLeft[1]);
     container.appendChild(content);
 }
 function mainFuncBtmCenter() {
-    btmCenterCheck = xMove(bottomCenter, btmCenterCheck);
+    gameBoard.bottomCenter[1] = xMove("bottomCenter", gameBoard.bottomCenter[1]);
     container.appendChild(content);
 }
 function mainFuncBtmRight() {
-    btmRightCheck = xMove(bottomRight, btmRightCheck);
+    gameBoard.bottomRight[1] = xMove("bottomRight", gameBoard.bottomRight[1]);
     container.appendChild(content);
 }
 
